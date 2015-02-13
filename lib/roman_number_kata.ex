@@ -4,12 +4,8 @@ defmodule RomanNumberKata do
     ""
   end
 
-  def convert(2) do # match arguments by value
-    "II"
-  end
-
   def convert(number) do # regular method definition
-    "I"
+    String.duplicate("I", number)
   end
 
 end
