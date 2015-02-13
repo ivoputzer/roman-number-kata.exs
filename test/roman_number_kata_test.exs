@@ -13,4 +13,8 @@ defmodule RomanNumberKataTest do
     assert RomanNumberKata.convert(2) == "II"
   end
 
+  test "it converts 3" do
+    assert RomanNumberKata.convert(3) == "III"
+  end
+
 end

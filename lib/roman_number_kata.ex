@@ -5,7 +5,7 @@ defmodule RomanNumberKata do
   end
 
   def convert(number) do # regular method definition
-    String.duplicate("I", number)
+    "I" <> convert(number - 1)
   end
 
 end
