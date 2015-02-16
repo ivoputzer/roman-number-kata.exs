@@ -1,7 +1,9 @@
 defmodule RomanNumberKata do
 
-  def eval(num) do # helper method to pass in the list
-    eval(num, [{10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}])
+  @num [{10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}]
+
+  def eval(num) do
+    eval(num, @num)
   end
 
   defp eval(num, _) when num < 1 do
