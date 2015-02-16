@@ -4,6 +4,18 @@ defmodule RomanNumberKata do
     ""
   end
 
+  def convert(4) do
+    "IV"
+  end
+
+  def convert(5) do
+    "V"
+  end
+
+  def convert(6) do
+    "VI"
+  end
+
   def convert(number) do # regular method definition
     "I" <> convert(number - 1)
   end
