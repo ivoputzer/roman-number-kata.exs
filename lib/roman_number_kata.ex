@@ -1,19 +1,19 @@
 defmodule RomanNumberKata do
 
-  def convert(number) when number < 1 do # methods with guard statement
+  def eval(num) do # helper method to pass in the list
+    eval(num, [{5, "V"}, {4, "IV"}, {1, "I"}])
+  end
+
+  def eval(num, _) when num < 1 do
     ""
   end
 
-  def convert(number) when number >= 5 do
-    "V" <> convert(number - 5)
+  def eval(num, [{arabic, roman} | tail]) when num >= arabic do
+    roman <> eval(num - arabic, [{arabic, roman} | tail])
   end
 
-  def convert(number) when number >= 4 do
-    "IV" <> convert(number - 4)
-  end
-
-  def convert(number) when number >= 1 do # regular method definition
-    "I" <> convert(number - 1)
+  def eval(num, [_ | tail]) do
+    eval(num, tail)
   end
 
 end
