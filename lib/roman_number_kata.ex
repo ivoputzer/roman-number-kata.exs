@@ -2,9 +2,7 @@ defmodule RomanNumberKata do
 
   @num [{10, "X"}, {9, "IX"}, {5, "V"}, {4, "IV"}, {1, "I"}]
 
-  def eval(num) do
-    eval(num, @num)
-  end
+  def eval(num), do: eval(num, @num) # one line method
 
   defp eval(num, _) when num < 1 do
     ""
