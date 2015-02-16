@@ -4,19 +4,15 @@ defmodule RomanNumberKata do
     ""
   end
 
-  def convert(4) do
-    "IV"
+  def convert(number) when number >= 5 do
+    "V" <> convert(number - 5)
   end
 
-  def convert(5) do
-    "V"
+  def convert(number) when number >= 4 do
+    "IV" <> convert(number - 4)
   end
 
-  def convert(6) do
-    "VI"
-  end
-
-  def convert(number) do # regular method definition
+  def convert(number) when number >= 1 do # regular method definition
     "I" <> convert(number - 1)
   end
 
